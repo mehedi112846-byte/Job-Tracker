@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- for daisy ui  -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- for tailwind css  -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- for design linkup  -->
+     <link rel="stylesheet" href="design/styleIndex.css">
+
+    <!-- for font  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+     <!-- for icons  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="font bg-[#F1F2F4] py-[60px]">
+    <header>
+        <section class="navigation_section w-[69.375%] mx-auto ">
+            <h3 class="text-[#002C5C] text-2xl font-bold ">Job Application Tracker</h3>
+
+            <div class="nav_card_container flex gap-[16px] text-center mt-[20px]">
+
+                <div class="nav_card w-[32.372%] text-left p-[20px] bg-white">
+                    <h4 class="text-[14px] text-[#323B49] font-medium">Total</h4>
+                    <h4 class="text-[20px] text-[#002C5C] font-bold">8</h4>
+                </div>
+
+                <div class="nav_card w-[32.372%] text-left p-[20px] bg-white">
+                    <h4 class="text-[14px] text-[#323B49] font-medium">Interview</h4>
+                    <h4 class="text-[20px] text-[#10B981] font-bold">0</h4>
+                </div>
+
+                <div class="nav_card w-[32.372%] text-left p-[20px] bg-white">
+                    <h4 class="text-[14px] text-[#323B49] font-medium">Rejected</h4>
+                    <h4 class="text-[20px] text-[#EF4444] font-bold">0</h4>
+                </div>
+                
+            </div>
+            <hr class="border-[0.5px] border-[#E6E7E9] my-[30px]">
+        </section>
+    </header>
+
+    <main>
+        <section class="main_section w-[69.375%] mx-auto">
+
+            <div class="main_top_title flex justify-between mb-[24px]">
+                <h4 class="text-[20px] text-[#002C5C] font-bold">Available Jobs</h4>
+                <h4 class="text-[15px] text-[#64748B] font-medium">8 jobs</h4>
+            </div>
+
+            <div class="main_top_button_container flex gap-[8px]">
+                <button class="btn btn-primary ">All</button>
+                <button class="btn ">Interview</button>
+                <button class="btn ">Rejected</button>
+            </div>
+
+            <div class="main_card_container">
+
+                <div class="main_card w-[100%] bg-white rounded-[8px] p-[24px] mt-[16px]">
+                    <div class="bin_icon absolute left-[81.5%]">
+                        <p class="bg-slate-50 rounded-full py-1 px-1.5 shadow-md"><i class="fa-regular fa-trash-can"></i></p>
+                    </div>
+                    <h4 class="text-[17px] text-[#002C5C] font-bold ">Tech Titans Inc.</h4>
+                    <p class="mt-[4px] text-[#64748B]">Position: Senior Frontend Developer</p>
+                    <p class="mt-[4px] mb-[20px] text-[#64748B]">Location: San Francisco, CA (Remote)</p>
+                    <p class="text-[#323B49]">Type: Full-time</p>
+                    <p class="mt-[5px] mb-[5px] text-[#64748B]">Salary: $140,000 - $170,000 / year</p>
+                    <button class="btn btn-soft btn-primary text-[#002C5C]">NOT APPLIED</button>
+                    <p class="text-[#64748B] my-[8px]">Description: Responsible for building responsive user interfaces using React and optimizing web performance.</p>
+                    <div class="card_button_container flex gap-[8px] mt-[8px]">
+                        <button class="btn btn-outline btn-accent border-[#10B981] text-[#10B981]">INTERVIEW</button>
+                        <button class="btn btn-outline btn-secondary border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                    </div>
+                </div>
+
+                <div class="main_card w-[100%] bg-white rounded-[8px] p-[24px] mt-[16px]">
+                    <div class="bin_icon absolute left-[81.5%]">
+                        <p class="bg-slate-50 rounded-full py-1 px-1.5 shadow-md"><i class="fa-regular fa-trash-can"></i></p>
+                    </div>
+                    <h4 class="text-[17px] text-[#002C5C] font-bold ">Global Finance Group</h4>
+                    <p class="mt-[4px] text-[#64748B]">Position: Financial Analyst</p>
+                    <p class="mt-[4px] mb-[20px] text-[#64748B]">Location: London, UK</p>
+                    <p class="text-[#323B49]">Type: Full-time</p>
+                    <p class="mt-[5px] mb-[5px] text-[#64748B]">Salary: £55,000 - £70,000 / year</p>
+                    <button class="btn btn-soft btn-primary text-[#002C5C]">NOT APPLIED</button>
+                    <p class="text-[#64748B] my-[8px]">Description: Managing portfolio risk assessments and preparing quarterly financial reports for stakeholders.</p>
+                    <div class="card_button_container flex gap-[8px] mt-[8px]">
+                        <button class="btn btn-outline btn-accent border-[#10B981] text-[#10B981]">INTERVIEW</button>
+                        <button class="btn btn-outline btn-secondary border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                    </div>
+                </div>
+
+                <div class="main_card w-[100%] bg-white rounded-[8px] p-[24px] mt-[16px]">
+                    <div class="bin_icon absolute left-[81.5%]">
+                        <p class="bg-slate-50 rounded-full py-1 px-1.5 shadow-md"><i class="fa-regular fa-trash-can"></i></p>
+                    </div>
+                    <h4 class="text-[17px] text-[#002C5C] font-bold ">Creative Pulse Media</h4>
+                    <p class="mt-[4px] text-[#64748B]">Position: Content Strategist</p>
+                    <p class="mt-[4px] mb-[20px] text-[#64748B]">Location: New York, NY</p>
+                    <p class="text-[#323B49]">Type: Contract</p>
+                    <p class="mt-[5px] mb-[5px] text-[#64748B]">Salary: $45 - $60 / hour</p>
+                    <button class="btn btn-soft btn-primary text-[#002C5C]">NOT APPLIED</button>
+                    <p class="text-[#64748B] my-[8px]">Description: Developing multi-channel social media campaigns and overseeing brand voice consistency.</p>
+                    <div class="card_button_container flex gap-[8px] mt-[8px]">
+                        <button class="btn btn-outline btn-accent border-[#10B981] text-[#10B981]">INTERVIEW</button>
+                        <button class="btn btn-outline btn-secondary border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                    </div>
+                </div>
+
+                <div class="main_card w-[100%] bg-white rounded-[8px] p-[24px] mt-[16px]">
+                    <div class="bin_icon absolute left-[81.5%]">
+                        <p class="bg-slate-50 rounded-full py-1 px-1.5 shadow-md"><i class="fa-regular fa-trash-can"></i></p>
+                    </div>
+                    <h4 class="text-[17px] text-[#002C5C] font-bold ">HealthStream Solutions</h4>
+                    <p class="mt-[4px] text-[#64748B]">Position: Data Scientist</p>
+                    <p class="mt-[4px] mb-[20px] text-[#64748B]">Location: Boston, MA</p>
+                    <p class="text-[#323B49]">Type: Full-time</p>
+                    <p class="mt-[5px] mb-[5px] text-[#64748B]">Salary: $130,000 - $160,000 / year</p>
+                    <button class="btn btn-soft btn-primary text-[#002C5C]">NOT APPLIED</button>
+                    <p class="text-[#64748B] my-[8px]">Description: Utilizing machine learning models to analyze patient outcomes and improve clinical efficiency.</p>
+                    <div class="card_button_container flex gap-[8px] mt-[8px]">
+                        <button class="btn btn-outline btn-accent border-[#10B981] text-[#10B981]">INTERVIEW</button>
+                        <button class="btn btn-outline btn-secondary border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                    </div>
+                </div>
+
+                <div class="main_card w-[100%] bg-white rounded-[8px] p-[24px] mt-[16px]">
+                    <div class="bin_icon absolute left-[81.5%]">
+                        <p class="bg-slate-50 rounded-full py-1 px-1.5 shadow-md"><i class="fa-regular fa-trash-can"></i></p>
+                    </div>
+                    <h4 class="text-[17px] text-[#002C5C] font-bold ">Urban Logistics Co.</h4>
+                    <p class="mt-[4px] text-[#64748B]">Position: Operations Manager</p>
+                    <p class="mt-[4px] mb-[20px] text-[#64748B]">Location: Chicago, IL</p>
+                    <p class="text-[#323B49]">Type: Full-time</p>
+                    <p class="mt-[5px] mb-[5px] text-[#64748B]">Salary: $90,000 - $115,000 / year</p>
+                    <button class="btn btn-soft btn-primary text-[#002C5C]">NOT APPLIED</button>
+                    <p class="text-[#64748B] my-[8px]">Description: Overseeing supply chain workflows and managing regional distribution center personnel.</p>
+                    <div class="card_button_container flex gap-[8px] mt-[8px]">
+                        <button class="btn btn-outline btn-accent border-[#10B981] text-[#10B981]">INTERVIEW</button>
+                        <button class="btn btn-outline btn-secondary border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                    </div>
+                </div>
+
+                <div class="main_card w-[100%] bg-white rounded-[8px] p-[24px] mt-[16px]">
+                    <div class="bin_icon absolute left-[81.5%]">
+                        <p class="bg-slate-50 rounded-full py-1 px-1.5 shadow-md"><i class="fa-regular fa-trash-can"></i></p>
+                    </div>
+                    <h4 class="text-[17px] text-[#002C5C] font-bold ">Green Horizon Energy</h4>
+                    <p class="mt-[4px] text-[#64748B]">Position: Sustainability Consultant</p>
+                    <p class="mt-[4px] mb-[20px] text-[#64748B]">Location: Berlin, Germany</p>
+                    <p class="text-[#323B49]">Type: Part-time</p>
+                    <p class="mt-[5px] mb-[5px] text-[#64748B]">Salary: €40,000 - €50,000 / year</p>
+                    <button class="btn btn-soft btn-primary text-[#002C5C]">NOT APPLIED</button>
+                    <p class="text-[#64748B] my-[8px]">Description: Advising corporate clients on carbon footprint reduction and renewable energy transitions.</p>
+                    <div class="card_button_container flex gap-[8px] mt-[8px]">
+                        <button class="btn btn-outline btn-accent border-[#10B981] text-[#10B981]">INTERVIEW</button>
+                        <button class="btn btn-outline btn-secondary border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                    </div>
+                </div>
+
+                <div class="main_card w-[100%] bg-white rounded-[8px] p-[24px] mt-[16px]">
+
+                    <div class="bin_icon absolute left-[81.5%]">
+                        <p class="bg-slate-50 rounded-full py-1 px-1.5 shadow-md"><i class="fa-regular fa-trash-can"></i></p>
+                    </div>
+                    <h4 class="text-[17px] text-[#002C5C] font-bold ">Blue Chip Security</h4>
+                    <p class="mt-[4px] text-[#64748B]">Position: Cyber Security Engineer</p>
+                    <p class="mt-[4px] mb-[20px] text-[#64748B]">Location: Austin, TX</p>
+                    <p class="text-[#323B49]">Type: Full-time</p>
+                    <p class="mt-[5px] mb-[5px] text-[#64748B]">Salary: $120,000 - $155,000 / year</p>
+                    <button class="btn btn-soft btn-primary text-[#002C5C]">NOT APPLIED</button>
+                    <p class="text-[#64748B] my-[8px]">Description: Implementing firewall protocols, conducting penetration tests, and monitoring network traffic.</p>
+                    <div class="card_button_container flex gap-[8px] mt-[8px]">
+                        <button class="btn btn-outline btn-accent border-[#10B981] text-[#10B981]">INTERVIEW</button>
+                        <button class="btn btn-outline btn-secondary border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                    </div>
+                </div>
+
+                <div class="main_card w-[100%] bg-white rounded-[8px] p-[24px] mt-[16px]">
+                    <div class="bin_icon absolute left-[81.5%]">
+                        <p class="bg-slate-50 rounded-full py-1 px-1.5 shadow-md"><i class="fa-regular fa-trash-can"></i></p>
+                    </div>
+                    <h4 class="text-[17px] text-[#002C5C] font-bold ">Apex Retail Brands</h4>
+                    <p class="mt-[4px] text-[#64748B]">Position: E-commerce Coordinator</p>
+                    <p class="mt-[4px] mb-[20px] text-[#64748B]">Location: Toronto, Canada</p>
+                    <p class="text-[#323B49]">Type: Temporary / Seasonal</p>
+                    <p class="mt-[5px] mb-[5px] text-[#64748B]">Salary: $50,000 - $65,000 / year</p>
+                    <button class="btn btn-soft btn-primary text-[#002C5C]">NOT APPLIED</button>
+                    <p class="text-[#64748B] my-[8px]">Description: Managing online inventory listings and coordinating with the logistics team for order fulfillment.</p>
+                    <div class="card_button_container flex gap-[8px] mt-[8px]">
+                        <button class="btn btn-outline btn-accent border-[#10B981] text-[#10B981]">INTERVIEW</button>
+                        <button class="btn btn-outline btn-secondary border-[#EF4444] text-[#EF4444]">REJECTED</button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
