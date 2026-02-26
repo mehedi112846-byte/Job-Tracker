@@ -140,6 +140,9 @@ function showReject(){
 function delete_card(element){
     const full_part = document.querySelector(".main_card_container");
     const null_part = document.querySelector(".main_section_null");
+    const isInterviewMode = document.getElementById("button_top_interview").classList.contains("bg-blue-400");
+    const isRejectedMode = document.getElementById("button_top_rejected").classList.contains("bg-blue-400");
+    const isAllMode = document.getElementById("button_top_all").classList.contains("bg-blue-400");
     if(element.id.includes("DeleteIcon")){
         const card = element.closest('[class^="card"]');
         if(card){
@@ -161,7 +164,15 @@ function delete_card(element){
             if(CountOfTotal===0 && CountOfTotalJobs===0){
                 full_part.classList.add("hidden");
                 null_part.classList.remove("hidden"); 
-    }
+            }
+            else if(isInterviewMode && CountOfInterview === 0){
+                full_part.classList.add("hidden");
+                null_part.classList.remove("hidden");
+            }
+            else if(isRejectedMode && CountOfRejected === 0){
+                full_part.classList.add("hidden");
+                null_part.classList.remove("hidden");
+            }
         }
     }
 }
