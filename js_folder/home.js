@@ -18,12 +18,14 @@
 
 function interview(id){
     const Not_Applied_Button = document.getElementById(id);
-    CountOfInterview++;
-    Interview_count_display.innerText = CountOfInterview;
-    if(CountOfRejected>0){
+    const currentText = Not_Applied_Button.innerText;
+    if(currentText === "INTERVIEW") return;
+    if(currentText === "REJECTED"){
         CountOfRejected--;
         Interview_count_display.innerText = CountOfRejected;
     }
+    CountOfInterview++;
+    Interview_count_display.innerText = CountOfInterview;
     Not_Applied_Button.innerText = "INTERVIEW";
     Not_Applied_Button.className = "btn btn-outline btn-accent border-[#10B981] text-[#10B981]";
     Not_Applied_Button.style.display = "block";
@@ -31,12 +33,14 @@ function interview(id){
 
 function rejected(id){
     const Not_Applied_Button = document.getElementById(id);
-    CountOfRejected++;
-    Reject_count_display.innerText = CountOfRejected;
-    if(CountOfInterview>0){
+    const currentText = Not_Applied_Button.innerText;
+    if(currentText === "REJECTED") return;
+    if(currentText === "INTERVIEW"){
         CountOfInterview--;
         Interview_count_display.innerText = CountOfInterview;
     }
+    CountOfRejected++;
+    Reject_count_display.innerText = CountOfRejected;
     Not_Applied_Button.innerText = "REJECTED";
     Not_Applied_Button.className = "btn btn-outline btn-secondary border-[#EF4444] text-[#EF4444]";
     Not_Applied_Button.style.display = "block";
@@ -133,17 +137,20 @@ function showReject(){
 
 // function for delete card 
 
-function delete_card(token){
-    const remove = document.getElementById(token);
-    const all_cards = document.querySelectorAll('.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8');
-    if(remove === "DeleteIcon1"){
-        all_cards[0].classList.add("hidden");
+function delete_card(element){
+    const full_part = document.querySelector(".main_card_container");
+    const null_part = document.querySelector(".main_section_null");
+    if(element.id.includes("DeleteIcon")){
+        const card = element.closest('[class^="card"]');
+        if(card){
+            card.classList.add("hidden");
+        }
     }
     CountOfTotal--;
     Total_count_display.innerText = CountOfTotal;
     CountOfTotalJobs--;
     Total_Jobs_count_display.innerText = CountOfTotalJobs;
-    if(CountOfTotal===0){
+    if(CountOfTotal===0 && CountOfTotalJobs===0){
        full_part.classList.add("hidden");
        null_part.classList.remove("hidden"); 
     }
