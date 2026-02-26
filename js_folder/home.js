@@ -143,15 +143,25 @@ function delete_card(element){
     if(element.id.includes("DeleteIcon")){
         const card = element.closest('[class^="card"]');
         if(card){
-            card.classList.add("hidden");
-        }
+            const status_btn = card.querySelector("button[id^='not_applied']");
+            const status_text = status_btn? status_btn.innerText.trim(): "";
+            if(status_text === "INTERVIEW"){
+                CountOfInterview--;
+                Interview_count_display.innerText = CountOfInterview;
+            }
+            else if(status_text === "REJECTED"){
+                CountOfRejected--;
+                Reject_count_display.innerText = CountOfRejected;
+            }
+            CountOfTotal--;
+            Total_count_display.innerText = CountOfTotal;
+            CountOfTotalJobs--;
+            Total_Jobs_count_display.innerText = CountOfTotalJobs;
+            card.remove();
+            if(CountOfTotal===0 && CountOfTotalJobs===0){
+                full_part.classList.add("hidden");
+                null_part.classList.remove("hidden"); 
     }
-    CountOfTotal--;
-    Total_count_display.innerText = CountOfTotal;
-    CountOfTotalJobs--;
-    Total_Jobs_count_display.innerText = CountOfTotalJobs;
-    if(CountOfTotal===0 && CountOfTotalJobs===0){
-       full_part.classList.add("hidden");
-       null_part.classList.remove("hidden"); 
+        }
     }
 }
